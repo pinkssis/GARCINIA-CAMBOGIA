@@ -1,0 +1,50 @@
+<style>
+    .hoverable {
+        position: relative;
+        width: 537px;
+        height: 456px;
+    }
+
+    .hoverable::before {
+        display: none;
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(./search.png) no-repeat center center rgba(0, 0, 0, 0.3);
+    }
+
+    .hoverable:hover::before {
+        display: block;
+    }
+</style>
+<div class="hoverable">
+    <img src="promo.png" width="537" height="456" alt="Промо изображение" />
+</div>
+
+
+
+
+<style>
+        .list-item {
+            list-style: none;
+        }
+
+        .list-item::before {
+            content: " ";
+            display: block;
+            width: 15px;
+            height: 15px;
+            background: url(./checkmark.png) no-repeat center;
+            background-size: cover;
+            float: left;
+        }
+    </style>
+    <ul>
+        <li class='list-item'>Element 1</li>
+        <li class='list-item'>Element 2</li>
+        <li class='list-item'>Element 3</li>
+        <li class='list-item'>Element 4</li>
+    </ul>
